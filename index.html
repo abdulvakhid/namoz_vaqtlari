@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Namoz vaqtlari</title>
+</head>
+
+<body class="body-bg">
+
+    <div class="container">
+        <div class="row text-center d-flex align-items-baseline p-3 bg-light rounded-5 mt-3 mb-3">
+            <p class="col-4 fs-4">Qolgan vaqt<time class="timer d-block" id="clockdiv">00</time></p>
+            <h1 class=" col-4 ">Namoz vaqtlari: <span class="text-warning region d-block">Toshkent</span></h1>
+            <p class="col-4 fs-3 ">Joriy vaqt : <time id="digital-clock">12:22</time>
+                <span class="d-block">Bugun:<span class="kun ms-2"></span></span>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="d-flex align-items-start ">
+            <form class="w-25 justify-content-between form">
+                <select class="form-select select-region " name="region" onChange="myNewFunction(this);">
+                    <option value="toshkent">Toshkent</option>
+                    <option value="andijon">Andijon viloyati</option>
+                    <option value="buxoro">Buxoro viloyati</option>
+                    <option value="qo'qon">Fargʻona viloyati</option>
+                    <option value="jizzax">Jizzax viloyati</option>
+                    <option value="urganch">Xorazm viloyati</option>
+                    <option value="namangan">Namangan viloyati</option>
+                    <option value="navoiy">Navoiy viloyati</option>
+                    <option value="qarshi">Qashqadaryo viloyati</option>
+                    <option value="nukus">Qoraqalpogʻiston Respublikasi</option>
+                    <option value="samarqand">Samarqand viloyati</option>
+                    <option value="sirdaryo">Sirdaryo viloyati</option>
+                    <option value="termiz">Surxondaryo viloyati</option>
+                </select>
+
+                <button class="btn btn-success mt-3 weekly">Bir haftalik</button>
+
+                <select class="form-select mt-3 month-select" name="times">
+                    <option selected disabled>Oylik taqvimlar</option>
+                    <option value="1">Yanvar</option>
+                    <option value="2">Fevral</option>
+                    <option value="3">Mart</option>
+                    <option value="4">Aprel</option>
+                    <option value="5">May</option>
+                    <option value="6">Iyun</option>
+                    <option value="7">Iyul</option>
+                    <option value="8">Avgust</option>
+                    <option value="9">Sentabr</option>
+                    <option value="10">Oktabr</option>
+                    <option value="11">Noyabr</option>
+                    <option value="12">Dekabr</option>
+                </select>
+            </form>
+            <ul class="list list-unstyled row justify-content-center mb-5">
+            </ul>
+        </div>
+        <p class="text-center text mb-5 fs-3"><span>Haftalik taqvimlar</span></p>
+        <div class="box-list mt-5 mb-5 mx-auto">
+        </div>
+        <p class="text-center texta mb-5 fs-3"><span class="month me-2"></span>oyi taqvimlari</p>
+        <div class="month-list"></div>
+    </div>
+
+    <template class="template">
+        <li class="position-relative col-3 m-3 mb-5">
+            <img width="150" height="150"
+                src="https://img.icons8.com/external-smashingstocks-thin-outline-color-smashing-stocks/67/null/external-mosque-party-and-celebrations-smashingstocks-thin-outline-color-smashing-stocks.png" />
+            <div
+                class="box position-absolute text-center text-white d-flex flex-column justify-content-center align-items-center active">
+                <span class="tong_saharlik">Bomdod</span>
+                <time class="tong_saharlik_time">13:00</time>
+            </div>
+        </li>
+        <li class="position-relative col-3 mb-5">
+            <img width="150" height="150"
+                src="https://img.icons8.com/external-smashingstocks-thin-outline-color-smashing-stocks/67/null/external-mosque-party-and-celebrations-smashingstocks-thin-outline-color-smashing-stocks.png" />
+            <div
+                class="box position-absolute text-center text-white d-flex flex-column justify-content-center align-items-center active">
+                <span class="peshin">Peshin</span>
+                <time class="peshin_time">13:00</time>
+            </div>
+        </li>
+        <li class="position-relative col-3 mb-5">
+            <img width="150" height="150"
+                src="https://img.icons8.com/external-smashingstocks-thin-outline-color-smashing-stocks/67/null/external-mosque-party-and-celebrations-smashingstocks-thin-outline-color-smashing-stocks.png" />
+            <div
+                class="box position-absolute text-center text-white d-flex flex-column justify-content-center align-items-center active">
+                <span class="asr">Asr</span>
+                <time class="asr_time">13:00</time>
+            </div>
+        </li>
+        <li class="position-relative col-3">
+            <img width="150" height="150"
+                src="https://img.icons8.com/external-smashingstocks-thin-outline-color-smashing-stocks/67/null/external-mosque-party-and-celebrations-smashingstocks-thin-outline-color-smashing-stocks.png" />
+            <div
+                class="box position-absolute text-center text-white d-flex flex-column justify-content-center align-items-center active">
+                <span class="shom_iftor">Shom</span>
+                <time class="shom_iftor_time">13:00</time>
+            </div>
+        </li>
+        <li class="position-relative col-3 ">
+            <img width="150" height="150"
+                src="https://img.icons8.com/external-smashingstocks-thin-outline-color-smashing-stocks/67/null/external-mosque-party-and-celebrations-smashingstocks-thin-outline-color-smashing-stocks.png" />
+            <div
+                class="box position-absolute text-center text-white d-flex flex-column justify-content-center align-items-center active">
+                <span class="hufton">Hufton</span>
+                <time class="hufton_time">13:00</time>
+            </div>
+        </li>
+    </template>
+
+
+    <template class="week-template">
+        <table class="mx-auto w-75 p-3 bg-success text-white">
+            <tbody class="">
+                <tr>
+                    <th>Hafta kuni</th>
+                    <th>Sana</th>
+                    <th>Bomdod</th>
+                    <th>Peshin</th>
+                    <th>Asr</th>
+                    <th>Shom</th>
+                    <th>Hufton</th>
+                </tr>
+                <tr>
+                    <td class=" weekday border-1"></td>
+                    <td class=" weektime"></td>
+                    <td class=" bomdod"></td>
+                    <td class="peshin"></td>
+                    <td class=" asr"></td>
+                    <td class=" shom"></td>
+                    <td class="hufton"></td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+    </template>
+
+    <template class="month-template">
+        <table class="mx-auto w-75 p-3 bg-success text-white">
+            <tbody class="">
+                <tr>
+                    <th>Hafta kuni</th>
+                    <th>Sana</th>
+                    <th>Bomdod</th>
+                    <th>Peshin</th>
+                    <th>Asr</th>
+                    <th>Shom</th>
+                    <th>Hufton</th>
+                </tr>
+                <tr>
+                    <td class=" month-dayname"></td>
+                    <td > <span class="month-kun"></span>  <span class="month-name"></span></td>
+                    <td class=" m-bomdod"></td>
+                    <td class="m-peshin"></td>
+                    <td class=" m-asr"></td>
+                    <td class=" m-shom"></td>
+                    <td class="m-hufton"></td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+    </template>
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
